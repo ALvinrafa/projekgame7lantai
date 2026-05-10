@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://4bes8xuc3qi0"]
+
+[ext_resource type="Script" uid="uid://cxxfbbbc30deq" path="res://player.gd" id="1_kpjcp"]
+[ext_resource type="Texture2D" uid="uid://ujd8rbfhmvvu" path="res://aset/Soldier.png" id="1_xhfnw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kpjcp"]
+height = 24.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=248856448]
+script = ExtResource("1_kpjcp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1654945282]
+position = Vector2(11, 12)
+texture = ExtResource("1_xhfnw")
+hframes = 9
+vframes = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D" unique_id=1004524586]
+position = Vector2(0, -2)
+shape = SubResource("CapsuleShape2D_kpjcp")
